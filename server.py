@@ -62,7 +62,7 @@ def switchOn() :
 	blinkThread.do_run = True
 	blinkThread.start()
 	
-	def switchBlue() :
+def switchBlue() :
 	red = 0
 	green = 0
 	blue = 250
