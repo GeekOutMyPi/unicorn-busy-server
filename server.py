@@ -61,6 +61,14 @@ def switchOn() :
 	blinkThread = threading.Thread(target=setColor, args=(red, green, blue, '', ''))
 	blinkThread.do_run = True
 	blinkThread.start()
+	
+	def switchBlue() :
+	red = 0
+	green = 0
+	blue = 250
+	blinkThread = threading.Thread(target=setColor, args=(red, green, blue, '', ''))
+	blinkThread.do_run = True
+	blinkThread.start()
 
 def switchOff() :
 	global blinkThread, globalBlue, globalGreen, globalRed
@@ -76,7 +84,16 @@ def setTimestamp() :
 	global globalLastCalled
 	globalLastCalled = datetime.now()
 
-# API Initialization
+# API Blue
+@app.route('/api/blue', methods=['GET'])
+def apiBlue() :
+	global globalLastCalledApi
+	globalLastCalledApi = '/api/blue'
+	switchOff()
+	switchBlue()
+	setTimestamp()
+	return jsonify({})
+
 @app.route('/api/on', methods=['GET'])
 def apiOn() :
 	global globalLastCalledApi
