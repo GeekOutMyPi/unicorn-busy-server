@@ -158,7 +158,7 @@ def apiPink() :
 
 # API Yellow
 @app.route('/api/yellow', methods=['GET'])
-def apiPink() :
+def apiYellow() :
 	global globalLastCalledApi
 	globalLastCalledApi = '/api/yellow'
 	switchOff()
