@@ -94,6 +94,14 @@ def switchPink() :
 	blinkThread.do_run = True
 	blinkThread.start()
 
+def switchYellow() :
+	red = 255
+	green = 255
+	blue = 0
+	blinkThread = threading.Thread(target=setColor, args=(red, green, blue, '', ''))
+	blinkThread.do_run = True
+	blinkThread.start()
+	
 def switchOff() :
 	global blinkThread, globalBlue, globalGreen, globalRed
 	globalRed = 0
@@ -145,6 +153,16 @@ def apiPink() :
 	globalLastCalledApi = '/api/pink'
 	switchOff()
 	switchPink()
+	setTimestamp()
+	return jsonify({})
+
+# API Yellow
+@app.route('/api/yellow', methods=['GET'])
+def apiPink() :
+	global globalLastCalledApi
+	globalLastCalledApi = '/api/yellow'
+	switchOff()
+	switchYellow()
 	setTimestamp()
 	return jsonify({})
 
