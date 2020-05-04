@@ -48,7 +48,6 @@ sudo apt-get install git
 ```
 git clone https://github.com/carolinedunn/unicorn-busy-server
 cd unicorn-busy-server
-sudo apt-get install git
 chmod +x ./install.sh
 sudo ./install.sh
 sudo python3 server.py
