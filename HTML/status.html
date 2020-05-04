@@ -1,0 +1,79 @@
+0<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Status Light</h1>
+
+<p>This page allows you to set the color of your status indicator.</p>
+
+<button onclick="greenFunc()">Green / Available</button>
+<br>
+<button onclick="redFunc()">Red / Do Not Disturb</button>
+<br>
+<button onclick="yellowFunc()">Yellow</button>
+<br>
+<button onclick="blueFunc()">Blue</button>
+<br>
+<button onclick="pinkFunc()">Pink</button>
+<br>
+<button onclick="offFunc()">Off</button>
+<br>
+<button onclick="randcolorFunc()">Random Color</button>
+<p id="demo"></p>
+
+<script>
+//REPLACE 0.0.0.0 WITH YOUR IP ADDRESS
+var greenurl = "http://0.0.0.0:5000/api/green";
+var redurl = "http://0.0.0.0:5000/api/red";
+var blue = "http://0.0.0.0:5000/api/blue";
+var pink = "http://0.0.0.0:5000/api/pink";
+var yellow = "http://0.0.0.0:5000/api/yellow";
+var offurl = "http://0.0.0.0:5000/api/off";
+var randurl = "http://0.0.0.0:5000/api/on";
+
+function greenFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", greenurl);
+  document.getElementById("demo").innerHTML = "Status set to AVAILABLE";
+  xmlhttp.send();
+}
+function redFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", redurl);
+  document.getElementById("demo").innerHTML = "Status set to DO NOT DISTURB";
+  xmlhttp.send();
+}
+function yellowFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", yellow);
+  document.getElementById("demo").innerHTML = "Status set to Yellow";
+  xmlhttp.send();
+}
+function blueFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", blue);
+  document.getElementById("demo").innerHTML = "Status set to Blue";
+  xmlhttp.send();
+}
+function pinkFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", pink);
+  document.getElementById("demo").innerHTML = "Status set to Pink";
+  xmlhttp.send();
+}
+function randcolorFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", randurl);
+  document.getElementById("demo").innerHTML = "Status set to a random color.";
+  xmlhttp.send();
+}
+function offFunc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.open("GET", offurl);
+  document.getElementById("demo").innerHTML = "Status light box OFF";
+  xmlhttp.send();
+}
+</script>
+
+</body>
+</html>
