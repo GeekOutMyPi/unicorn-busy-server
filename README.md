@@ -77,8 +77,7 @@ sudo systemctl enable busylight.service
 sudo systemctl disable busylight.service
 ```
 
-#Original Project
-
+# Original Project
 Microsoft Teams Status light - https://www.eliostruyf.com/diy-building-busy-light-show-microsoft-teams-presence/
 
 ![Available Status Teams](https://github.com/carolinedunn/unicorn-busy-server/blob/master/photos/teams-available-status.jpg)
