@@ -44,7 +44,7 @@ sudo apt-get install git
 ## Software Install command line 
 ```
 git clone https://github.com/carolinedunn/unicorn-busy-server
-Cd unicorn-busy-server
+cd unicorn-busy-server
 sudo apt-get install git
 chmod +x ./install.sh
 sudo ./install.sh
