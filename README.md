@@ -34,11 +34,13 @@ or Raspbian Lite on a Raspberry Pi Zero W
 - If you are using a Raspberry Pi Zero W (without headers), you will need to solder on 40 GPIO pins / headers.
 - Attach the unicorn pHat to your Raspberry Pi via GPIO headers.
 - Power up your Pi.
+- Open a Terminal on your Mac desktop and SSH into your Pi.
+OR
+- Windows https://www.chiark.greenend.org.uk/~sgtatham/putty/ and SSH into your Pi.
+OR
+- Connect a monitor, mouse, and keyboard to your RPi. 
 
-# Software Install
-- Open a Terminal or SSH into your Pi.
-
-## If you are using Raspbian Lite
+## If you are using Raspberry Pi OS Lite (previously known as Raspbian Lite) run the following commands in the terminal
 ```
 sudo apt-get update
 sudo apt-get install python-pip
